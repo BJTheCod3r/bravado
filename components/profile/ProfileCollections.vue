@@ -4,7 +4,14 @@
             <ProfileSearchBox @update="updateSearchParam" :searchParam="searchParam" />
         </section>
         <section>
-            <ProfileCard @update-status="updateSelected" :selected="isSelected(profile.email)" :searchParam="searchParam" :profile="profile" v-for="(profile, i) in filteredProfiles" :key="i" />
+            <ProfileCard
+                @update-status="updateSelected"
+                :selected="isSelected(profile.email)"
+                :searchParam="searchParam"
+                :profile="profile"
+                v-for="(profile, i) in filteredProfiles"
+                :key="i"
+            />
         </section>
         <section class="no-search" v-if="noMatch">
             <p>{{ `The search parameter "${searchParam}" does not match any profile.` }}</p>
@@ -40,7 +47,7 @@ export default {
     },
     methods: {
         isSelected(email) {
-           return this.selectedProfiles.includes(email)
+            return this.selectedProfiles.includes(email)
         },
         updateSelected(email) {
             this.$store.dispatch('profiles/updateSelected', email)
