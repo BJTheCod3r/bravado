@@ -1,0 +1,4 @@
+<template>
+  <ProfileCollections />
+</template>
+
