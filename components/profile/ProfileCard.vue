@@ -29,22 +29,18 @@ export default {
         profile: {
             required: true,
             type: Object
-        }
-    },
-    computed: {
-        searchParam() {
-            return this.$store.state.profiles.searchParam
         },
-        selectedProfiles() {
-            return this.$store.state.profiles.selected
+        searchParam: {
+            type: String,
+            default: ''
         },
-        selected() {
-          return this.selectedProfiles.includes(this.profile.email)
+        selected: {
+            type: Boolean
         }
     },
     methods: {
         updateSelected() {
-           this.$store.dispatch('profiles/updateSelected', this.profile.email)
+           this.$emit('update-status', this.profile.email)
         }
     },
     directives: {
