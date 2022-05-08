@@ -36,11 +36,12 @@ export default {
         },
         selected: {
             type: Boolean
+
         }
     },
     methods: {
         updateSelected() {
-           this.$emit('update-status', this.profile.email)
+            this.$emit('update-status', this.profile.email)
         }
     },
     directives: {
@@ -125,5 +126,4 @@ export default {
 .highlight {
     background-color: rgb(255, 247, 59, 1);
 }
-
 </style>
