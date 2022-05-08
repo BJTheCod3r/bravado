@@ -7,7 +7,7 @@
             <ProfileCard :profile="profile" v-for="(profile, i) in filteredProfiles" :key="i" />
         </section>
         <section class="no-search" v-if="noMatch">
-            <p>{{ `The search parameter "${searchParam}" does not match any profile` }}</p>
+            <p>{{ `The search parameter "${searchParam}" does not match any profile.` }}</p>
         </section>
     </div>
 </template>
