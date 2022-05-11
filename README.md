@@ -27,8 +27,8 @@ https://907db0ad-00ff-4b7a-821e-900acd481c2e.mock.pstmn.io/profiles
 
 https://quest-bravado.herokuapp.com/
 
-## Component & E2E tests
-To run component and E2E test run `npx cypress open-ct` and `npx cypress open` respectively. Or use `npx cypress run-ct` and `npx cypress`.
+## Component & E2E Tests
+To run component and E2E tests run `npx cypress open-ct` and `npx cypress open` respectively. Or use `npx cypress run-ct` and `npx cypress run`.
 
 ## Special Directories
 
