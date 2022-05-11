@@ -27,6 +27,9 @@ https://907db0ad-00ff-4b7a-821e-900acd481c2e.mock.pstmn.io/profiles
 
 https://quest-bravado.herokuapp.com/
 
+## Component & E2E tests
+To run component and E2E test run `npx cypress open-ct` and `npx cypress open` respectively. Or use `npx cypress run-ct` and `npx cypress`.
+
 ## Special Directories
 
 You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.

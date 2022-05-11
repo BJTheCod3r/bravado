@@ -9,17 +9,14 @@
                     <h2 v-highlight="searchParam">{{ profile.name }}</h2>
                     <span v-highlight="searchParam">{{ profile.email }}</span>
                 </div>
-                <div class="profile-card__title">
-                    <span class="profile-card__email" v-highlight="searchParam">{{ profile.title }}</span>
-                </div>
-                <div class="profile-card__address">
-                    <span v-highlight="searchParam">{{ profile.address }}</span>
-                </div>
+                <div class="profile-card__title" v-highlight="searchParam">{{ profile.title }}</div>
+                <div class="profile-card__address" v-highlight="searchParam">{{ profile.address }}, {{ profile.city }}</div>
             </div>
-            <div
-                @click="updateSelected"
-                class="profile-card__action"
-            >{{ selected ? 'SKIP SELECTION' : 'MARK AS SUITABLE' }}</div>
+            <div class="profile-card__action">
+                <span
+                    @click="updateSelected"
+                >{{ selected ? 'SKIP SELECTION' : 'MARK AS SUITABLE' }}</span>
+            </div>
         </div>
     </div>
 </template>
@@ -115,9 +112,11 @@ export default {
         line-height: 1.14rem;
         color: #009688;
         padding-left: 30px;
-        cursor: pointer;
         display: flex;
         align-items: center;
+        span {
+            cursor: pointer;
+        }
     }
 }
 .profile-card--selected {
